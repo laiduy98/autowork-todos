@@ -13,6 +13,7 @@ class Category(models.Model):
     class Meta:
         unique_together = ("user", "name")
         verbose_name_plural = "categories"
+        ordering = ["-created_at"]
 
     def __str__(self):
         return self.name
